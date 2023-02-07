@@ -1,0 +1,101 @@
+
+.cv_content{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+}
+.cv_container {
+    padding: 20px;
+    width: 80%;
+    color: balck;
+}
+.cv_header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user_pic_section {
+    margin-right: 15px;
+}
+.user_contact_details {
+    width: 93%;
+    background-color: antiquewhite;
+    padding: 1px 30px;
+}
+.contact_details_one,.contact_details_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.cv_body {
+    display: flex;
+    justify-content: space-between;
+}
+.print_btn{
+    box-shadow: 0px 1px 6px 1px #ff5722;
+    border: none;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.user_img{
+    border-radius: 50%;
+}
+.user_pic_section{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.profile_pick_input{
+    position: relative;
+    top: 0px;
+    height: 140px;
+    border-radius: 80px;
+    width: 160px;
+    padding: 10px 0px;
+    z-index: 99;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.skill{
+    border: 1px solid gray;
+    padding: 4px 8px;
+    margin: 0px 2px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        }
+
+      .print_btn{
+        visibility: hidden;
+      }
+    .cv_container {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+        visibility: visible;
+    }
+}
